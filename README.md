@@ -1,19 +1,9 @@
-# Modellbildung und Simulation 2 - Ausarbeitung
+# Modellbildung und Simulation 2 - Projektbeschreibung
 
 ![CI](https://github.com/joergbrech/modsim2-ausarbeitung/workflows/CI/badge.svg)
 
 :loudspeaker: **Lesen Sie dieses Dokument vollständig bis zum Ende!** :loudspeaker:
 
-Dies ist der Starter Code für ihre Ausarbeitung.  Die Ordnerstruktur ist wie folgt:
-
-|  Ordner   |  Beschreibung   |
-| --- | --- |
-| `docs` | Latex-Dateien für die Projektdokumentation |
-| `src`  | Alle Quelldateien ihrer entwickelten Programme |
-| `tests` | *Optional:* Unit tests für ihre entwickelten Funktionen in `src` |
-| `.github/workflows` | Skript für Continuous integration (siehe unten). Hier müssen Sie nichts ändern. |
-
-Mit Ausnahme von `.github/workflows` enhalten alle Ordner Beispieldateien, die sie nach Belieben löschen oder abändern können. Die *Ordnerstruktur* sollte aber erhalten bleiben.
 
 ## Abgabe
 
@@ -100,7 +90,7 @@ Angenommen Maja möchte eine bestimmte Teilaufgabe bearbeiten, z.B. das Kapitel 
 ### Stellen Sie folgende Dateien **nicht** unter Versionskontrolle:
 
  - Alle automatisch erstellten Dateien. Bei Latex sind das zum Beispiel Dateien mit der Endung `*.aux` oder `*.tmp`.
- - Große binäre Dateien, die sich regelmäßig ändern. **Dazu gehört die PDF-Version ihrer Dokumentation**. Unter Versionskontrolle gehören nur die `*.tex` Dateien, die sie brauchen um das Dokument zu kompilieren. Das Kompilieren des Dokumentes kann jedes Teammitglied lokal machen, oder er kann sich das automatisch erstellte Dokument unter dem Reiter *Actions* herunterladen, siehe "Automatische Tests".
+ - Große binäre Dateien, die sich regelmäßig ändern.
 
 </details>
 
@@ -110,28 +100,8 @@ Angenommen Maja möchte eine bestimmte Teilaufgabe bearbeiten, z.B. das Kapitel 
 
 ### Continuous Integration
 
-Dieses repository ist so vorbereitet, dass mit jedem *push* und jedem *Pull Request* zwei Aktionen automatisiert in der cloud durchgeführt werden, zum Einen wird das PDF-Dokument kompiliert, und zum anderen werden automatisch unit tests für den Matlab Code durchgeführt. Diese automatisierten Aktionen sind wesentliche Bestandteile von [Continuous Integration](https://de.wikipedia.org/wiki/Kontinuierliche_Integration).
+Dieses repository ist so vorbereitet, dass mit jedem *push* und jedem *Pull Request* Aktionen automatisiert in der cloud durchgeführt werden, konkret werden unit tests für den Matlab Code in `src` durchgeführt. Diese automatisierten Aktionen sind wesentliche Bestandteile von [Continuous Integration](https://de.wikipedia.org/wiki/Kontinuierliche_Integration).
 
-#### Automatisches Erstellen der Projektdokumentation
-
-Das Latex-Dokument wird automatisch online erstellt. Voraussetzung hierf"ur ist, dass der Dokument der Hauptdatei `main.tex` lautet. Das kompilierte Dokument können Sie sich als Artefakt herunterladen, indem Sie unter dem Reiter *Actions* den entsprechenden *commit* anklicken.
-
-#### Automatische unit tests.
-
-Diese Funktionalität ist **optional aber empfohlen**. Da die meisten von Ihnen Matlab-Code intwickeln werden, enthält das repository zu Beginn beispielhaft eine Matlabfunktion `src/fac.m` und eine Testdatei `tests/test_fac.m`. Letztere überprüft, ob die Funktion `fac` das erwartete Ergebnis liefert. Ich lege Ihnen nahe, ihren Code durch viele kleine Funktionen abzubilden, und jeder der Funktionen in einer Datei `tests/test_funktionsname.m` auf ihre Richtigkeit zu überprüfen.
-
- - `src/fac.m` und `tests/test_fac.m` sind Beispieldateien, um Ihnen die Funktionsweise zu demonstrieren. Sie können bedenkenlos gelöscht werden.
- - Die Unit tests werden mit [MOxUnit](https://github.com/MOxUnit/MOxUnit) durchgeführt, einem *unit testing framework* das mit Matlab und Octave kompatibel ist. Um Tests lokal auf ihrem Rechner durchführen zu können, installieren Sie zunächst [MOxUnit](https://github.com/MOxUnit/MOxUnit).
-
-    Um die unit tests lokal durchzuführen, wechseln Sie in Matlab/Octave in den `src` Ordner und geben 
-
-    ```matlab
-    moxunit_runtests('../tests')
-    ```
-
-    in das Kommandofenster ein. Damit werden alle Unit tests durchgeführt, die im Verzeichnis `tests` hinterlegt sind.
-
- - Falls sie sich für eine andere Sprache als Matlab entschieden haben, können Sie ebenfalls unit tests benutzen. In diesem Fall sprechen Sie mich an, ich helfe Ihnen gerne dabei.
 
 </details>
 

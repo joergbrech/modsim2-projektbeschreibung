@@ -9,28 +9,6 @@ on: push
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
-  # compile the latex document
-  build-latex:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-
-    # compile the document using texlive and latexmk
-    - name: Compile LaTeX document
-      uses: xu-cheng/latex-action@master
-      with:
-        root_file: main.tex
-        working_directory: docs
-
-    # Store the compiled pdf as an artifact
-    - uses: actions/upload-artifact@v1
-      with:
-        name: documentation
-        path: docs/main.pdf
-
   # run unit tests
   unit-tests:
 

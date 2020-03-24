@@ -1,0 +1,42 @@
+\chapter{Equations}
+For equations there are different ways to enter the mathematical environment. Using the command \verb+$ \frac{1}{x} $+ creates $ \frac{1}{x} $ within the text.
+
+\begin{equation}\label{eq:linfnc}
+F(x) = m \cdot x + b
+\end{equation}
+
+\begin{equation*}
+F(x) = ax^{2}+bx+c
+\end{equation*}
+\noindent
+Referencing Equation \ref{eq:linfnc}.\\
+\newline
+For matrices in brackets use \verb+$\begin{bmatrix} ... \end{bmatrix}$+ :
+\begin{center}
+$A=\begin{bmatrix}
+1	& 0	& \dots	 & 0      \\
+0	& 1 	& \dots  & 0 	  \\
+\vdots	& 0 	& \ddots & \vdots \\
+0 	& \dots & 0	 & 1
+\end{bmatrix}$
+\end{center}
+\noindent
+While for matrices in parentheses \verb+$\begin{pmatrix} ... \end{pmatrix}$+ is used :
+\begin{center}
+$B=\begin{pmatrix}
+1	& 0	& \dots	 & 0      \\
+0	& 1 	& \dots  & 0 	  \\
+\vdots	& 0 	& \ddots & \vdots \\
+0 	& \dots & 0	 & 1
+\end{pmatrix}$
+\end{center}
+\noindent 
+Using just \verb+$\begin{matrix} ... \end{matrix}$+ yields a matrix without brackets or parentheses:
+\begin{center}
+$\begin{matrix}
+1	& 0	& \dots	 & 0      \\
+0	& 1 	& \dots  & 0 	  \\
+\vdots	& 0 	& \ddots & \vdots \\
+0 	& \dots & 0	 & 1
+\end{matrix}$
+\end{center}

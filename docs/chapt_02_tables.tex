@@ -1,0 +1,34 @@
+\chapter{Tables}
+Super fancy tables.
+
+\begin{center}
+\captionof{table}{Combination rules for $\sigma$ and $\varepsilon$ in Gromacs.}\label{table:combination_rules} %% Caption for table and list of tables is the same. The caption needs to be labeled to reference the table.
+\begin{tabular}{| c | c | c |}
+\textbf{Combination Rule 1} & \textbf{Combination Rule 2} & \textbf{Combination Rule 3} \\
+\hline
+$W_\mathrm{AA} = 4\varepsilon_\mathrm{A}\sigma^{12}_\mathrm{A}$ & $\varepsilon_\mathrm{A}$ & $\varepsilon_\mathrm{A}$ \\
+$V_\mathrm{AA} = 4\varepsilon_\mathrm{A}\sigma^{6}_\mathrm{A}$ & $\sigma_\mathrm{A}$ & $\sigma_\mathrm{A}$ \\
+\hline
+$W_\mathrm{AB} = \Big( 4\varepsilon_\mathrm{A}\sigma^{12}_\mathrm{A} \cdot 4\varepsilon_\mathrm{B}\sigma^{12}_\mathrm{B} \Big)^{\frac{1}{2}}$ & $\varepsilon_\mathrm{AB} = \sqrt[]{\varepsilon_\mathrm{A}\varepsilon_\mathrm{B}}$ & $W_\mathrm{AB} = \Big( 4\varepsilon_\mathrm{A}\sigma^{12}_\mathrm{A} \cdot 4\varepsilon_\mathrm{B}\sigma^{12}_\mathrm{B} \Big)^{\frac{1}{2}}$ \\
+$V_\mathrm{AB} = \Big( 4\varepsilon_\mathrm{A}\sigma^{6}_\mathrm{A} \cdot 4\varepsilon_\mathrm{B}\sigma^{6}_\mathrm{B} \Big)^{\frac{1}{2}}$ & $\sigma_\mathrm{AB} = \frac{1}{2}\big(\sigma_\mathrm{A} + \sigma_\mathrm{B} \big)$ & $V_\mathrm{AB} = \Big( 4\varepsilon_\mathrm{A}\sigma^{6}_\mathrm{A} \cdot 4\varepsilon_\mathrm{B}\sigma^{6}_\mathrm{B} \Big)^{\frac{1}{2}}$ \\
+\end{tabular}
+\end{center}
+\noindent
+A simple table showing combination rules for Gromacs (see Table \ref{table:combination_rules}).\\
+\verb+\begin{tabular}{| r | l | c |}+ initializes a table with three columns. The entries can be aligned \textbf{r}ight, \textbf{l}eft or \textbf{c}entered. The pipe \verb+|+ creates a vertical line between every cell.\\
+\newline
+
+\begin{center}
+\captionof{table}{Different row colors}\label{table:diff_row_col}
+\rowcolors{2}{green}{pink} %% {starting row}{odd rows}{even rows}
+\begin{tabular}{l | c | r}
+green & green & green \\
+\hline
+pink & pink & pink \\
+green & green & green \\
+pink & pink & pink \\
+green & green & green \\
+\end{tabular}
+\end{center}
+\noindent
+Use \verb+&+ to separate columns in a row and \verb+\\+ to begin a new row. Table \ref{table:diff_row_col} shows that it is possible to use different colors.

@@ -14,5 +14,5 @@ if n == 0 || n == 1
     m = 1;
 else
     % calculate via recursion
-    m = n.*fac(n-1);
+    m = n.*fac(n-2);
 end

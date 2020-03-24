@@ -5,23 +5,32 @@
 :loudspeaker: **Lesen Sie dieses Dokument vollständig bis zum Ende!** :loudspeaker:
 
 
+## Inhalt der Aufgabe
+
+ - Sie demonstrieren, dass Sie mit git vertraut sind.
+ - Sie erhalten Einblick in automatisierte Software-Tests
+ - Sie verfassen eine Projektbeschreibung für Ihre Ausarbeitung
+
+
 ## Abgabe
 
-**Wichtig:** Die Abgabe Ihrer Ausarbeitung erfolgt über den Issue Tracker dieses repositories. Erstellen Sie _vor Ablauf ihrer Deadline_ ein Issue, in dem Sie ihre **kompilierte Projektbeschreibung als Anhang beifügen** und mir (@joergbrech) das Issue zur Bearbeitung zuweisen.
+**Wichtig:** Die Abgabe dieser Übung erfolgt über den Issue Tracker dieses repositories sowie mittels Pull Request. 
 
-Folgende Bedingungen müssen zusätzlich erfüllt sein:
+ 1. Erstellen Sie _mit genügend Puffer vor Ablauf ihrer Deadline_ ein Issue mit dem Titel `Projektbeschreibung absegnen` und weisen es mir (@joergbrech) zur Bearbeitung zu. 
+ 2. Erstellen Sie einen *Pull Request*, der den Bug in `src/fac.m` behebt und verlangen von mir (@joergbrech) ein *review*.
 
- - :pencil2: Ändern Sie den Titel dieser `README.md` Datei entsprechend ihres Projekttitels um. 
+:point_right: **Erst wenn ich explizit die Projektbeschreibung sowie den Pull Request abgesegnet habe, gilt die Aufgabe als bestanden! Das Erstellen des Issues und des PRs alleine reicht nicht!** :point_left:
 
- - :clipboard: Kopieren Sie ihre Projektbeschreibung aus der vorherigen Aufgabe in dieses Repository.
+## Ihre Aufgabe
 
- - :speech_balloon: Der Quellcode muss gut dokumentiert und fehlerfrei ausführbar sein.
+TODO: Hier VIEL ausführlicher.
 
- - :exclamation: Der Latexcode muss kompilierbar sein.
-
+ - Machen Sie sich mit dem System [git](https://git-scm.com/) vertraut.
+ - Erstellen Sie ein Issue
+ - Erstellen Sie ein branch `factorial-bug`. Reparieren Sie den Programmierfehler, der sich in `src/fac.m` eingeschlichen hat und stellen Sie einen Pull Request.
+ - Füllen Sie die fehlenden Inhalte in `PROJEKTBESCHREIBUNG.md` aus.
 
 ## Zusatzinformationen
-
 
 <details>
 <summary>Teamarbeit mit GIT</summary>

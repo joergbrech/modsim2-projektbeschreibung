@@ -35,7 +35,7 @@ Auf Github sind sie nun Mitglied eines Teams. Nutzen Sie Github zur Kommunikatio
     - Historisch bedingt ist git ein Kommandozeilenprogramm ohne graphische Oberfläche. Für Windows, Linux und Mac gibt es inzwischen einige gute graphischen Oberflächen, z.B. [Tortoise Git](https://tortoisegit.org/) für Windows. 
     - In dieser Übung finden aber **nur die Kommandozeilenbefehle** Erwähnung. Um als Windows Nutzer git aus der Kommandozeile verwenden zu können, benutzen sie die [git bash](https://gitforwindows.org/), oder noch besser: Installieren Sie sich eine [Linux Distribution als Subsystem](https://docs.microsoft.com/de-de/windows/wsl/install-win10), z.B. `Ubuntu 18.04`.
     - Auf welche Weise sie git bedienen möchten, bleibt Ihnen überlassen.
- - Machen Sie sich mit dem Arbeiten auf Github vertraut, insbesondere mit dem Issue Tracker und Pull Requests. Als Erinnerungsstütze finden Sie weiter unten unter "Zusatzinformationen" ein Beispiel. In dieser Aufgabe wird es darum gehen, diesen Beispiel-Workflow einmal durchzuarbeiten.
+ - Machen Sie sich mit dem Arbeiten auf Github vertraut, insbesondere mit dem Issue Tracker und Pull Requests. Als Erinnerungsstütze finden Sie weiter unten unter "Zusatzinformationen" ein Beispiel. In Aufgabe 1.1 wird es darum gehen, diesen Beispiel-Workflow einmal durchzuarbeiten.
  - Hier finden Sie einige git und Github Tutorials:
     - https://guides.github.com/introduction/git-handbook/
     - https://www.atlassian.com/de/git

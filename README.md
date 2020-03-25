@@ -21,6 +21,12 @@
 
 :point_right: **Erst wenn ich explizit die Projektbeschreibung abgesegnet habe, gilt die Aufgabe als bestanden! Das Erstellen des Issues alleine reicht nicht!** :point_left:
 
+## Ihr Team
+
+Auf Github sind sie nun Mitglied eines Teams. Nutzen Sie Github zur Kommunikation mit ihren Teammitgliedern
+
+<p align="center"><img src="images/team_discussion.gif"/></p>
+
 ## Ihre Aufgabe
 
 ### Vorarbeit in Eigenregie:

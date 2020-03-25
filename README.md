@@ -40,6 +40,13 @@ Auf Github sind sie nun Mitglied eines Teams. Nutzen Sie Github zur Kommunikatio
     - https://guides.github.com/introduction/git-handbook/
     - https://www.atlassian.com/de/git
     - https://lab.github.com/githubtraining/introduction-to-github
+ - Legen Sie mit Aufgabe 1.1 los, sobald Sie folgende Fragen beantworten können:
+   - Wozu wird git verwendet?
+   - Was ist der Unterschied zwischen git und Github?
+   - Was ist ein repository?
+   - Was verbirgt sich hinter den Begriffen "commit", "branch" und "Staging Area" und "merge conflict"?
+   - Was machen die Befehle `git clone`, `git pull`, `git push`, `git add`, `git commit`, `git checkout`, `git merge`?
+   - Wer oder was ist Linus Tovalds?
 
 Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, bzw. in einer beliebigen Reihenfolge bearbeitet werden.
 
@@ -67,6 +74,7 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
 
    ![](https://help.github.com/assets/images/help/repository/repo-tabs-issues.png)
 
+   Das erstellte Issue kriegt eine laufende Nummer zugewiesen. Unter der Annahme, dass es das erste Issue ihres repositories ist, ist dies `#1`. Mit diesem hashtag können Sie sich in Kommentaren und commit messages auf das Issue beziehen.
  - Es ist Zeit den bug zu beheben. Wechseln Sie auf die Hauptseite dieses repositories und klicken auf "Clone or Download"
 
    ![](https://help.github.com/assets/images/help/repository/clone-repo-clone-url-button.png)
@@ -127,7 +135,7 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
  - *Commiten* sie alle Änderungen aus der Staging Area in ihren lokalen branch `factorial-bug` mit einer sprechenend commit Nachricht:
 
    ```
-   git commit -m "fix bug in fac.m"
+   git commit -m "fix bug in fac.m, addresses #1"
    ```
    
    Überprüfen Sie den Status mit `git status`
@@ -140,13 +148,6 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
    git push -u origin HEAD
    ```
 
-   Falls sie weitere Änderungen vornehmen wollen, können sie zu einem späteren Zeitpunkt den *remote* branch und ihren mit dem Befehl
-
-   ```
-   git push
-   ```
-   synchronisieren.
-
  - Wechseln Sie wieder in den Hauptentwicklungszweig
 
    ```
@@ -158,13 +159,15 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
 
    ![](images/pull_request.gif)
 
-   Wenn Sie zufrieden sind, erstellen Sie einen "*Pull Request* auf den `master` branch" und wählen Sie auf der rechten Seite eines ihrer Teammitglieder als *Reviewer* aus.
+   Wenn Sie zufrieden sind, erstellen Sie einen "*Pull Request* auf den `master` branch" und wählen Sie auf der rechten Seite eines oder alle ihrer Teammitglieder als *Reviewer* aus.
+
+   **Pro Tipp:** *Schreiben Sie `fixes #1` in die Beschreibung des Pull Requests. Dann wird Github automatisch das erstellte Issue schließen, sobald der Pull Request von ihren Teammitgliedern akzeptiert und gemerged wurde.*
 
  - Wenn Sie als Reviewer ausgewählt wurden, überprüfen sie die Änderung die ihr Teammitglied in ihrem Pull Request vorgenommen hat. Wenn sie zufrieden sind, wählen Sie "Merge pull request" um alle Änderungen in den Hauptentwicklungszweig zu übernehmen.
 
  - Das Issue ist behoben und kann im Issue Tracker geschlossen werden.
 
- - Nun ist ihre lokale Kopie des repositories um einen commit hinter der Kopie auf Github. Vergewissern Sie sich, dass sie auf dem Hauptentwicklungszweig `master` sind und *pull*en sie sich alle Änderungen von dem *remote* repository auf Github in ihre lokale Kopie:
+ - Nun ist ihre lokale Kopie des `master` branch um einen commit hinter dem `master` branch auf Github. Vergewissern Sie sich, dass sie auf dem Hauptentwicklungszweig `master` sind und *pull*en sie sich alle Änderungen von dem *remote* repository auf Github in ihre lokale Kopie:
 
    ```
    git checkout master

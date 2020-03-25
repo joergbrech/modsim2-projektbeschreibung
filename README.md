@@ -134,7 +134,7 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
 
    ![](images/git_status_2.png)
 
- - Es ist Zeit, ihre Änderungen in das *remote* repository auf Github zu *push*en. Dazu erstellen Sie einen branch auf dem nicht-lokalen repository auf github mit demselben namen wie ihr lokaler branch, `factorial-bug` und synchronisieren den lokalen und remote branch in einem Befehl:
+ - Es ist Zeit, ihre Änderungen in das *remote* repository auf Github zu *push*en. Dazu erstellen Sie einen branch auf dem nicht-lokalen repository auf github mit dem selben Namen wie ihr lokaler branch, `factorial-bug` und synchronisieren den lokalen und remote branch in einem Befehl:
    
    ```
    git push -u origin HEAD

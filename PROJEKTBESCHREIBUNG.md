@@ -10,9 +10,11 @@
 
 > Beschreiben Sie hier hier Projekt, gegebenenfalls mit Quellenangaben. Um Bilder verwenden zu können, fügen sie sie ihrem Repository hinzu und referenzieren Sie sie hier:
 >  
-> ![](image.png | width=100)
+> <p align="center"><img src="image.png" width="300" /></p>
 >
->  Werfen Sie einen Blick in das [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) um die Formatierung von Text in `*.md` Dateien zu verstehen.
+>  Werfen Sie einen Blick in das [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) um die Formatierung von Text in `*.md` Dateien zu verstehen. 
+>
+> Alle Zeilen dieses Dokuments, die mit `>` beginnen, dienen Ihnen als Hilfestellung und können gelöscht werden.
 
 ## Zielsetzung
 

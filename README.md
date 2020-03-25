@@ -35,11 +35,11 @@ Auf Github sind sie nun Mitglied eines Teams. Nutzen Sie Github zur Kommunikatio
     - Historisch bedingt ist git ein Kommandozeilenprogramm ohne graphische Oberfläche. Für Windows, Linux und Mac gibt es inzwischen einige gute graphischen Oberflächen, z.B. [Tortoise Git](https://tortoisegit.org/) für Windows. 
     - In dieser Übung finden aber **nur die Kommandozeilenbefehle** Erwähnung. Um als Windows Nutzer git aus der Kommandozeile verwenden zu können, benutzen sie die [git bash](https://gitforwindows.org/), oder noch besser: Installieren Sie sich eine [Linux Distribution als Subsystem](https://docs.microsoft.com/de-de/windows/wsl/install-win10), z.B. `Ubuntu 18.04`.
     - Auf welche Weise sie git bedienen möchten, bleibt Ihnen überlassen.
- - Machen Sie sich mit dem Arbeiten auf Github vertraut, insbesondere mit dem Issue Tracker und Pull Requests. Als Erinnerungsstütze finden Sie weiter unten unter "Zusatzinformationen" ein Beispiel.
+ - Machen Sie sich mit dem Arbeiten auf Github vertraut, insbesondere mit dem Issue Tracker und Pull Requests. Als Erinnerungsstütze finden Sie weiter unten unter "Zusatzinformationen" ein Beispiel. In dieser Aufgabe wird es darum gehen, diesen Beispiel-Workflow einmal durchzuarbeiten.
  - Hier finden Sie einige git und Github Tutorials:
-    - A
-    - B
-    - C
+    - https://guides.github.com/introduction/git-handbook/
+    - https://www.atlassian.com/de/git
+    - https://lab.github.com/githubtraining/introduction-to-github
 
 Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, bzw. in einer beliebigen Reihenfolge bearbeitet werden.
 
@@ -63,7 +63,7 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
 
       Offensichtlich wird getestet, ob `fac(5)` 120 ergibt. Tatsächlich liefert die Funktion aber 15 als Rückgabewert für die Eingabe 5. Offenslicht hat die Funktion `fac`, die in [`src/fac.m`](src/fac.m) definiert ist einen bug.
 
- - Wechseln Sie auf den Issue Tracker und eröffnen ein Issue, der das Problem möglichst treffend beschreibt.
+ - Wechseln Sie auf den Issue Tracker und eröffnen ein Issue, das das Problem möglichst treffend beschreibt.
 
    ![](https://help.github.com/assets/images/help/repository/repo-tabs-issues.png)
 
@@ -158,9 +158,9 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
 
    ![](images/pull_request.gif)
 
-   Wenn Sie zufrieden sind, erstellen Sie einen *Pull Request* auf den `master` branch und wählen Sie auf der rechten Seite eines ihrer Teammitglieder als *Reviewer* aus.
+   Wenn Sie zufrieden sind, erstellen Sie einen "*Pull Request* auf den `master` branch" und wählen Sie auf der rechten Seite eines ihrer Teammitglieder als *Reviewer* aus.
 
- - Wenn Sie als Reviewer ausgewählt wurden, überprüfen sie die Änderung die ihr Teammitglied in ihrem Pull Request vorgenommen hat, und wenn sie zufrieden sind, wählen Sie "Merge pull request" um alle Änderungen in den Hauptentwicklungszweig zu übernehmen.
+ - Wenn Sie als Reviewer ausgewählt wurden, überprüfen sie die Änderung die ihr Teammitglied in ihrem Pull Request vorgenommen hat. Wenn sie zufrieden sind, wählen Sie "Merge pull request" um alle Änderungen in den Hauptentwicklungszweig zu übernehmen.
 
  - Das Issue ist behoben und kann im Issue Tracker geschlossen werden.
 
@@ -174,7 +174,15 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
 Ich lege Ihnen sehr ans Herzen, diesen Workflow für ihre Projektarbeit zu übernehmen. Arbeiten Sie mit dem Issue tracker. Vermeiden Sie *commit*s in den `master` branch. Arbeiten sie mit branches und *Pull Requests*. Schreiben Sie Tests für ihren Matlab-Code.
 
  ### Aufgabe 1.2: Projektbeschreibung
- - Füllen Sie die fehlenden Inhalte in `PROJEKTBESCHREIBUNG.md` aus.
+
+ In diesem Semester müssen Sie eine Projektarbeit in einem Team absolvieren. Sie suchen sich selbstständig eine Fragestellung oder ein Problem aus, welche(s) sich mit den Methoden aus den Vorlesungen Modellbildung und Simulation 1 und 2 beantworten bzw. lösen lässt. 
+
+ In dieser Aufgabe geht es darum,
+  -  sich ein Thema auszusuchen; Sie können sich gerne in [dieser Liste](https://gist.github.com/joergbrech/8f3d43a750bc44a0b49012ea43e7c119) Inspiration suchen
+  - das Thema auszuformulieren und sich Gedanken über verwendete Literatur, Methoden und Software zu machen
+  - sich einen groben Projektplan zumachen, das Projekt in kleinere Teilaufgaben aufzuteilen und sich Gedanken über mögliche Risiken und Stolperfallen zu machen.
+
+ Füllen Sie die fehlenden Inhalte in der Datei [`PROJEKTBESCHREIBUNG.md`](PROJEKTBESCHREIBUNG.md) aus. Die Projektbeschreibung sollte ungefähr in der Größenordnung von zehn Sätzen sein. Verwenden Sie hierzu gerne den Pull Request Workflow aus Aufgabe 1.1 um die Datei im Team zu bearbeiten. Sobald Sie mit ihrer Projektbeschreibung fertig sind, eröffnen Sie bitte ein Issue im Issue Tracker mit dem Titel `Projektbeschreibung absegnen` und weisen es mir (@joergbrech) zur Bearbeitung zu. **Planen Sie genug Puffer vor der Deadline ein: Die Aufgabe gilt als erfüllt, wenn ich die Projektbeschreibung abgesegnet habe!**
 
 ## Troubleshooting
 

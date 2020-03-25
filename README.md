@@ -14,12 +14,12 @@
 
 ## Abgabe
 
-**Wichtig:** Die Abgabe dieser Übung erfolgt über den Issue Tracker dieses repositories sowie mittels Pull Request. 
+**Wichtig:** Die Abgabe dieser Übung erfolgt über den Issue Tracker dieses repositories. 
 
- 1. Erstellen Sie _mit genügend Puffer vor Ablauf ihrer Deadline_ ein Issue mit dem Titel `Projektbeschreibung absegnen` und weisen es mir (@joergbrech) zur Bearbeitung zu. 
- 2. Erstellen Sie einen *Pull Request*, der den Bug in `src/fac.m` behebt und verlangen von mir (@joergbrech) ein *review*.
+ - Erstellen Sie _mit genügend Puffer vor Ablauf ihrer Deadline_ ein Issue mit dem Titel `Projektbeschreibung absegnen` und weisen es mir (@joergbrech) zur Bearbeitung zu. Bei der Gelegenheit überprüfe ich auch, ob sie die Schritte aus Aufgabe 1 richtig befolgt haben.
 
-:point_right: **Erst wenn ich explizit die Projektbeschreibung sowie den Pull Request abgesegnet habe, gilt die Aufgabe als bestanden! Das Erstellen des Issues und des PRs alleine reicht nicht!** :point_left:
+
+:point_right: **Erst wenn ich explizit die Projektbeschreibung abgesegnet habe, gilt die Aufgabe als bestanden! Das Erstellen des Issues alleine reicht nicht!** :point_left:
 
 ## Ihre Aufgabe
 
@@ -61,7 +61,7 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
 
    ![](https://help.github.com/assets/images/help/repository/repo-tabs-issues.png)
 
- - Wechseln Sie dazu auf die Hauptseite dieses repositories und klicken auf "Clone or Download"
+ - Es ist Zeit den bug zu beheben. Wechseln Sie auf die Hauptseite dieses repositories und klicken auf "Clone or Download"
 
    ![](https://help.github.com/assets/images/help/repository/clone-repo-clone-url-button.png)
  - Kopieren Sie sich den `hppts` Link auf ihr repository. 
@@ -155,6 +155,8 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
    Wenn Sie zufrieden sind, erstellen Sie einen *Pull Request* auf den `master` branch und wählen Sie auf der rechten Seite eines ihrer Teammitglieder als *Reviewer* aus.
 
  - Wenn Sie als Reviewer ausgewählt wurden, überprüfen sie die Änderung die ihr Teammitglied in ihrem Pull Request vorgenommen hat, und wenn sie zufrieden sind, wählen Sie "Merge pull request" um alle Änderungen in den Hauptentwicklungszweig zu übernehmen.
+
+ - Das Issue ist behoben und kann im Issue Tracker geschlossen werden.
 
  - Nun ist ihre lokale Kopie des repositories um einen commit hinter der Kopie auf Github. Vergewissern Sie sich, dass sie auf dem Hauptentwicklungszweig `master` sind und *pull*en sie sich alle Änderungen von dem *remote* repository auf Github in ihre lokale Kopie:
 

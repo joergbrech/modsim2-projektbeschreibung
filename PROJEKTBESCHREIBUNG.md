@@ -2,13 +2,17 @@
 
 | Name | Matrikelnummer |
 | - | - |
-| Otto | 123 |
-| Anna | 321 |
-| Helga | 313 |
+| Otto Oswald | 123 |
+| Anna Ahrend | 321 |
+| Helga Himmel | 313 |
 
 ## Projektbeschreibung
 
-> Beschreiben Sie hier hier Projekt, gegebenenfalls mit Quellenangaben
+> Beschreiben Sie hier hier Projekt, gegebenenfalls mit Quellenangaben. Um Bilder verwenden zu können, fügen sie sie ihrem Repository hinzu und referenzieren Sie sie hier:
+>  
+> ![](image.png | width=100)
+>
+>  Werfen Sie einen Blick in das [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) um die Formatierung von Text in `*.md` Dateien zu verstehen.
 
 ## Zielsetzung
 

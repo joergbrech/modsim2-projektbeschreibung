@@ -41,7 +41,7 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
 
  - Mit jedem *push* in dieses repository werden automatische Tests für den Programmcode im `src` Verzeichnis durchgeführt. An dem roten Kreuz nebem dem letzten *commit* stellen Sie fest, dass mindestens einer der Tests nicht erfolgreich war:
    
-   <p align="center"><img src="failed_test.gif"></p>
+   ![](failed_test.gif)
 
    Sie erhalten zusätzliche Detailinformationen:
 
@@ -163,9 +163,7 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
    git pull
    ```
 
-Ich lege Ihnen sehr ans Herzen, diesen Workflow für ihre Projektarbeit zu übernehmen. Arbeiten Sie mit dem Issue tracker, vermeiden Sie *commit*s in den `master` branch sondern arbeiten sie mit branches und *Pull Requests*.
-
-Außerdem lege ich ihnen sehr ans Herzen Tests für ihren Matlab-Code zu schreiben. So können sie ohne viel Zusatzaufwand nach jeder Änderung ihres Codes sehen, ob ihre Tests noch erfolgreich sind oder nicht.
+Ich lege Ihnen sehr ans Herzen, diesen Workflow für ihre Projektarbeit zu übernehmen. Arbeiten Sie mit dem Issue tracker. Vermeiden Sie *commit*s in den `master` branch. Arbeiten sie mit branches und *Pull Requests*. Schreiben Sie Tests für ihren Matlab-Code.
 
  ### Aufgabe 2/2: Projektbeschreibung
  - Füllen Sie die fehlenden Inhalte in `PROJEKTBESCHREIBUNG.md` aus.

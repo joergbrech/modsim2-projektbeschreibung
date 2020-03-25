@@ -16,7 +16,7 @@
 
 **Wichtig:** Die Abgabe dieser Übung erfolgt über den Issue Tracker dieses repositories. 
 
- - Erstellen Sie _mit genügend Puffer vor Ablauf ihrer Deadline_ ein Issue mit dem Titel `Projektbeschreibung absegnen` und weisen es mir (@joergbrech) zur Bearbeitung zu. Bei der Gelegenheit überprüfe ich auch, ob sie die Schritte aus Aufgabe 1 richtig befolgt haben.
+ - Erstellen Sie _mit genügend Puffer vor Ablauf ihrer Deadline_ ein Issue mit dem Titel `Projektbeschreibung absegnen` und weisen es mir (@joergbrech) zur Bearbeitung zu. Bei der Gelegenheit überprüfe ich auch, ob sie die Schritte aus Aufgabe 1.1 richtig befolgt haben.
 
 
 :point_right: **Erst wenn ich explizit die Projektbeschreibung abgesegnet habe, gilt die Aufgabe als bestanden! Das Erstellen des Issues alleine reicht nicht!** :point_left:
@@ -43,7 +43,7 @@ Auf Github sind sie nun Mitglied eines Teams. Nutzen Sie Github zur Kommunikatio
 
 Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, bzw. in einer beliebigen Reihenfolge bearbeitet werden.
 
- ### Aufgabe 1/2: Bugfix und automatische Tests
+ ### Aufgabe 1.1: Bugfix und automatische Tests
 
  - Mit jedem *push* in dieses repository werden automatische Tests für den Programmcode im `src` Verzeichnis durchgeführt. An dem roten Kreuz nebem dem letzten *commit* stellen Sie fest, dass mindestens einer der Tests nicht erfolgreich war:
    
@@ -173,7 +173,7 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
 
 Ich lege Ihnen sehr ans Herzen, diesen Workflow für ihre Projektarbeit zu übernehmen. Arbeiten Sie mit dem Issue tracker. Vermeiden Sie *commit*s in den `master` branch. Arbeiten sie mit branches und *Pull Requests*. Schreiben Sie Tests für ihren Matlab-Code.
 
- ### Aufgabe 2/2: Projektbeschreibung
+ ### Aufgabe 1.2: Projektbeschreibung
  - Füllen Sie die fehlenden Inhalte in `PROJEKTBESCHREIBUNG.md` aus.
 
 ## Troubleshooting

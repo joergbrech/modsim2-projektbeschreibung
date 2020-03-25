@@ -41,11 +41,11 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
 
  - Mit jedem *push* in dieses repository werden automatische Tests für den Programmcode im `src` Verzeichnis durchgeführt. An dem roten Kreuz nebem dem letzten *commit* stellen Sie fest, dass mindestens einer der Tests nicht erfolgreich war:
    
-   ![](failed_test.gif)
+   ![](images/failed_test.gif)
 
    Sie erhalten zusätzliche Detailinformationen:
 
-   ![](failed_test_2.png)
+   ![](images/failed_test_2.png)
 
    Wir lesen die Information von unten nach oben. 
     - Zeile 38: Zeile 23 von [`tests/testfac.m`](tests/test_fac.m), im Funktionskörper der Funktion `test_fac_5` ist die Ursache des Fehlers.
@@ -104,7 +104,7 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
    git status
    ```
 
-   ![](git_status_0.png)
+   ![](images/git_status_0.png)
 
    Sie können mit `git diff` alle vorgenommenen Änderungen sehen.
 
@@ -116,7 +116,7 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
    
    Überprüfen Sie den Status mit `git status`
 
-   ![](git_status_1.png)
+   ![](images/git_status_1.png)
 
  - *Commiten* sie alle Änderungen aus der Staging Area in ihren lokalen branch `factorial-bug` mit einer sprechenend commit Nachricht:
 
@@ -126,7 +126,7 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
    
    Überprüfen Sie den Status mit `git status`
 
-   ![](git_status_2.png)
+   ![](images/git_status_2.png)
 
  - Es ist Zeit, ihre Änderungen in das *remote* repository auf Github zu *push*en. Dazu erstellen Sie einen branch auf dem nicht-lokalen repository auf github mit demselben namen wie ihr lokaler branch, `factorial-bug` und synchronisieren den lokalen und remote branch in einem Befehl:
    
@@ -150,7 +150,7 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
 
  - Öffnen Sie ihr repository auf Github und wechseln Sie auf die *branches* Ansicht. Vergewissern Sie sich, dass es einen branch mit Namen `factorial-bug` gibt, der ihren *commit* enthält, und das nun alle automatischen Tests durchlaufen. Letzteres erkennen Sie am grünen Häkchen neben dem *branch* bzw. neben dem *commit*.
 
-   ![](pull_request.gif)
+   ![](images/pull_request.gif)
 
    Wenn Sie zufrieden sind, erstellen Sie einen *Pull Request* auf den `master` branch und wählen Sie auf der rechten Seite eines ihrer Teammitglieder als *Reviewer* aus.
 
@@ -172,7 +172,7 @@ Ich lege Ihnen sehr ans Herzen, diesen Workflow für ihre Projektarbeit zu über
 
 Wenn Sie Schwierigkeiten haben, öffnen Sie bitte im Issue Tracker ein neues Issue und weisen sie es mir (@joergbrech) zur Bearbeitung zu.
 
-<p align="center"><img src="issue_tracker.gif"></p>
+<p align="center"><img src="images/issue_tracker.gif"></p>
 
 ## Zusatzinformationen
 

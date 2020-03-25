@@ -23,12 +23,158 @@
 
 ## Ihre Aufgabe
 
-TODO: Hier VIEL ausführlicher.
+### Vorarbeit in Eigenregie:
 
- - Machen Sie sich mit dem System [git](https://git-scm.com/) vertraut.
- - Erstellen Sie ein Issue
- - Erstellen Sie ein branch `factorial-bug`. Reparieren Sie den Programmierfehler, der sich in `src/fac.m` eingeschlichen hat und stellen Sie einen Pull Request.
+ - Machen Sie sich mit dem [Versionskontroll](https://de.wikipedia.org/wiki/Versionsverwaltung)system [git](https://git-scm.com/) vertraut und installieren Sie es auf ihrem Rechner. 
+    - Historisch bedingt ist git ein Kommandozeilenprogramm ohne graphische Oberfläche. Für Windows, Linux und Mac gibt es inzwischen einige gute graphischen Oberflächen, z.B. [Tortoise Git](https://tortoisegit.org/) für Windows. 
+    - In dieser Übung finden aber **nur die Kommandozeilenbefehle** Erwähnung. Um als Windows Nutzer git aus der Kommandozeile verwenden zu können, benutzen sie die [git bash](https://gitforwindows.org/), oder noch besser: Installieren Sie sich eine [Linux Distribution als Subsystem](https://docs.microsoft.com/de-de/windows/wsl/install-win10), z.B. `Ubuntu 18.04`.
+    - Auf welche Weise sie git bedienen möchten, bleibt Ihnen überlassen.
+ - Machen Sie sich mit dem Arbeiten auf Github vertraut, insbesondere mit dem Issue Tracker und Pull Requests. Als Erinnerungsstütze finden Sie weiter unten unter "Zusatzinformationen" ein Beispiel.
+ - Hier finden Sie einige git und Github Tutorials:
+    - A
+    - B
+    - C
+
+Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, bzw. in einer beliebigen Reihenfolge bearbeitet werden.
+
+ ### Aufgabe 1/2: Bugfix und automatische Tests
+
+ - Mit jedem *push* in dieses repository werden automatische Tests für den Programmcode im `src` Verzeichnis durchgeführt. An dem roten Kreuz nebem dem letzten *commit* stellen Sie fest, dass mindestens einer der Tests nicht erfolgreich war:
+   
+   <p align="center"><img src="failed_test.gif"></p>
+
+   Sie erhalten zusätzliche Detailinformationen:
+
+   ![](failed_test_2.png)
+
+   Wir lesen die Information von unten nach oben. 
+    - Zeile 38: Zeile 23 von [`tests/testfac.m`](tests/test_fac.m), im Funktionskörper der Funktion `test_fac_5` ist die Ursache des Fehlers.
+    - Zeile 37: Offensichtlich wurde in Zeile 23 von [`tests/testfac.m`](tests/test_fac.m) die Funktion `assertEqual` aufgerufen, die den Fehler verursacht hat. Diese Funktion ist in Zeile 70 von `assertEqual.m` definiert, das interessiert uns aber weniger.
+    - Zeilen 30-36: Die Funktion `assertEqual` hat zwei Eingaben bekommen, von  denen erwartet wurde, dass sie gleich sind. Offensichtlich sind sie es aber nicht: Die erste Eingabe ist 15, die zweite ist 120. 
+    - Es ist Zeit sich den Test genauer anzuschauen:
+
+      https://github.com/joergbrech/modsim2-projektbeschreibung/blob/3201fc1044e119ea0e818a64289d4a9f065efae3/tests/test_fac.m#L21-L23
+
+      Offensichtlich wird getestet, ob `fac(5)` 120 ergibt. Tatsächlich liefert die Funktion aber 15 als Rückgabewert für die Eingabe 5. Offenslicht hat die Funktion `fac`, die in [`src/fac.m`](src/fac.m) definiert ist einen bug.
+
+ - Wechseln Sie auf den Issue Tracker und eröffnen ein Issue, der das Problem möglichst treffend beschreibt.
+
+   ![](https://help.github.com/assets/images/help/repository/repo-tabs-issues.png)
+
+ - Wechseln Sie dazu auf die Hauptseite dieses repositories und klicken auf "Clone or Download"
+
+   ![](https://help.github.com/assets/images/help/repository/clone-repo-clone-url-button.png)
+ - Kopieren Sie sich den `hppts` Link auf ihr repository. 
+   ![](https://help.github.com/assets/images/help/repository/https-url-clone.png)
+ - Auf ihrem Rechner, öffnen Sie ein Kommandozeilenfenster (git bash, Ubuntu 18.04 WSL oder ein Terminal) und klonen Sie sich das Verzeichnis auf ihren lokalen Rechner.
+   ```bash
+   git clone https://github.com/octo-org/octo-repo.git
+   ```
+   wobei sie hier den Link *ihres* repositories verwenden. Es wird ein neuer Ordner angelegt, mit dem Namen `aufgabe1-projektbeschreibung-teamname`. Wechseln sie in diesen Ordner
+
+
+   ```
+   cd aufgabe1-projektbeschreibung-teamname
+   ```
+
+   und lassen Sie sich den Inhalt wieder geben:
+
+   ```
+   ls -la
+   ```
+
+   Sie erkennen, dass es sich bei dem Ordner um ein git-repository handelt daran, dass es einen Unterordner mit Namen `.git` gibt. In einem git-repository können Sie sich jederzeit den Status des repositories anschauen:
+
+   ```
+   git status
+   ```
+
+ - Erstellen Sie ein branch `factorial-bug` und wechseln Sie auf diesen:
+ 
+   ```
+   git checkout -b factorial-bug
+   ```
+   
+   Alle Änderungen die sie nun in dem Ordner vornehmen finden nicht mehr im Hauptentwicklungszweig `master` statt, sondern in ihrem eigenen lokalen Zweig `factorial-bug`. 
+
+ - Finden Sie den Fehler in `src/fac.m` und beheben Sie ihn. Sie können hierzu einen beliebigen Texteditor, Matlab oder Octave verwenden. Wenn sie die Tests in `tests/test_fac.m` lokal auf ihrem Rechner ausführen möchten, müssen sie sich vorher [MOxUnit](https://github.com/MOxUnit/MOxUnit) installieren, das ist aber nicht zwingend nötig.
+ - Vergewissern Sie sich per Kommandozeile, dass nur die Datei `src/fac.m` geändert wurde:
+
+   ```
+   git status
+   ```
+
+   ![](git_status_0.png)
+
+   Sie können mit `git diff` alle vorgenommenen Änderungen sehen.
+
+ - Fügen Sie alle geänderten Dateien der *Staging Area* hinzu
+
+   ```
+   git add .
+   ```
+   
+   Überprüfen Sie den Status mit `git status`
+
+   ![](git_status_1.png)
+
+ - *Commiten* sie alle Änderungen aus der Staging Area in ihren lokalen branch `factorial-bug` mit einer sprechenend commit Nachricht:
+
+   ```
+   git commit -m "fix bug in fac.m"
+   ```
+   
+   Überprüfen Sie den Status mit `git status`
+
+   ![](git_status_2.png)
+
+ - Es ist Zeit, ihre Änderungen in das *remote* repository auf Github zu *push*en. Dazu erstellen Sie einen branch auf dem nicht-lokalen repository auf github mit demselben namen wie ihr lokaler branch, `factorial-bug` und synchronisieren den lokalen und remote branch in einem Befehl:
+   
+   ```
+   git push -u origin HEAD
+   ```
+
+   Falls sie weitere Änderungen vornehmen wollen, können sie zu einem späteren Zeitpunkt den *remote* branch und ihren mit dem Befehl
+
+   ```
+   git push
+   ```
+   synchronisieren.
+
+ - Wechseln Sie wieder in den Hauptentwicklungszweig
+
+   ```
+   git checkout master
+   ```
+   Vergewissern sie sich, dass in diesem Zweig ihre Änderungen an `src/fac.m` fehlen.
+
+ - Öffnen Sie ihr repository auf Github und wechseln Sie auf die *branches* Ansicht. Vergewissern Sie sich, dass es einen branch mit Namen `factorial-bug` gibt, der ihren *commit* enthält, und das nun alle automatischen Tests durchlaufen. Letzteres erkennen Sie am grünen Häkchen neben dem *branch* bzw. neben dem *commit*.
+
+   ![](pull_request.gif)
+
+   Wenn Sie zufrieden sind, erstellen Sie einen *Pull Request* auf den `master` branch und wählen Sie auf der rechten Seite eines ihrer Teammitglieder als *Reviewer* aus.
+
+ - Wenn Sie als Reviewer ausgewählt wurden, überprüfen sie die Änderung die ihr Teammitglied in ihrem Pull Request vorgenommen hat, und wenn sie zufrieden sind, wählen Sie "Merge pull request" um alle Änderungen in den Hauptentwicklungszweig zu übernehmen.
+
+ - Nun ist ihre lokale Kopie des repositories um einen commit hinter der Kopie auf Github. Vergewissern Sie sich, dass sie auf dem Hauptentwicklungszweig `master` sind und *pull*en sie sich alle Änderungen von dem *remote* repository auf Github in ihre lokale Kopie:
+
+   ```
+   git checkout master
+   git pull
+   ```
+
+Ich lege Ihnen sehr ans Herzen, diesen Workflow für ihre Projektarbeit zu übernehmen. Arbeiten Sie mit dem Issue tracker, vermeiden Sie *commit*s in den `master` branch sondern arbeiten sie mit branches und *Pull Requests*.
+
+Außerdem lege ich ihnen sehr ans Herzen Tests für ihren Matlab-Code zu schreiben. So können sie ohne viel Zusatzaufwand nach jeder Änderung ihres Codes sehen, ob ihre Tests noch erfolgreich sind oder nicht.
+
+ ### Aufgabe 2/2: Projektbeschreibung
  - Füllen Sie die fehlenden Inhalte in `PROJEKTBESCHREIBUNG.md` aus.
+
+## Troubleshooting
+
+Wenn Sie Schwierigkeiten haben, öffnen Sie bitte im Issue Tracker ein neues Issue und weisen sie es mir (@joergbrech) zur Bearbeitung zu.
+
+<p align="center"><img src="issue_tracker.gif"></p>
 
 ## Zusatzinformationen
 
@@ -79,7 +225,7 @@ Angenommen Maja möchte eine bestimmte Teilaufgabe bearbeiten, z.B. das Kapitel 
 
     eingeben, da es schon im *remote* Github repository einen branch mit demselben Namen gibt.
 
- - Sobald Maja mit der Bearbeitung ihrer Teilaufgabe fertig ist, kann sie auf Github eine *Pull Request* stellen, und einen ihrer Teammitglieder, Peter, um einen *review* bitten. Wenn Peter mit Majas Änderungen einverstanden ist, kann er den *Pull Request* in den `master` branch *mergen*.
+ - Sobald Maja mit der Bearbeitung ihrer Teilaufgabe fertig ist, kann sie auf Github eine *Pull Request* stellen, und einen ihrer Teammitglieder, Willi, um einen *review* bitten. Wenn Willi mit Majas Änderungen einverstanden ist, kann er den *Pull Request* in den `master` branch *mergen*.
 
   - Sobald Maja's Änderungen im `master` übernommen sind, kann der branch `maja/chapter-stand-der-technik` ohne Bedenken gelöscht werden.
 
@@ -109,8 +255,9 @@ Angenommen Maja möchte eine bestimmte Teilaufgabe bearbeiten, z.B. das Kapitel 
 
 ### Continuous Integration
 
-Dieses repository ist so vorbereitet, dass mit jedem *push* und jedem *Pull Request* Aktionen automatisiert in der cloud durchgeführt werden, konkret werden unit tests für den Matlab Code in `src` durchgeführt. Diese automatisierten Aktionen sind wesentliche Bestandteile von [Continuous Integration](https://de.wikipedia.org/wiki/Kontinuierliche_Integration).
+<img src="https://media.giphy.com/media/12NUbkX6p4xOO4/source.gif" align="right"/>
 
+Dieses repository ist so vorbereitet, dass mit jedem *push* und jedem *Pull Request* gewisse Aktionen automatisiert in der cloud durchgeführt werden, konkret werden unit tests für den Matlab Code in `src` durchgeführt. Diese automatisierten Aktionen sind wesentliche Bestandteile von [Continuous Integration](https://de.wikipedia.org/wiki/Kontinuierliche_Integration).
 
 </details>
 

@@ -163,7 +163,7 @@ Die folgenden beiden Aufgaben bauen nicht aufeinander auf und können parallel, 
 
    **Pro Tipp:** *Schreiben Sie `fixes #1` in die Beschreibung des Pull Requests. Dann wird Github automatisch das erstellte Issue schließen, sobald der Pull Request von ihren Teammitgliedern akzeptiert und gemerged wurde.*
 
- - Wenn Sie als Reviewer ausgewählt wurden, überprüfen sie die Änderung die ihr Teammitglied in ihrem Pull Request vorgenommen hat. Wenn sie zufrieden sind, wählen Sie "Merge pull request" um alle Änderungen in den Hauptentwicklungszweig zu übernehmen.
+ - Wenn Sie als Reviewer ausgewählt wurden, überprüfen sie die Änderung die ihr Teammitglied in ihrem Pull Request vorgenommen hat. Wenn sie zufrieden sind, wählen Sie "Approve Changes" und "Merge pull request" um alle Änderungen in den Hauptentwicklungszweig zu übernehmen.
 
  - Das Issue ist behoben und kann im Issue Tracker geschlossen werden.
 

@@ -1,7 +1,5 @@
 # Modellbildung und Simulation 2 - Projektbeschreibung
 
-![CI](https://github.com/joergbrech/modsim2-projektbeschreibung/workflows/CI/badge.svg)
-
 :loudspeaker: **Lesen Sie dieses Dokument vollständig bis zum Ende!** :loudspeaker:
 
 

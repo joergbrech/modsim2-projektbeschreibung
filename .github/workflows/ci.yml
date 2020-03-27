@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Perform unit tests
-      uses: joergbrech/moxunit-action@master
+      uses: joergbrech/moxunit-action@v1.1
       with:
-        test_directory: tests
-        src_directory: src
+        tests: tests
+        src: src
